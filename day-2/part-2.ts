@@ -8,15 +8,6 @@ interface Position {
     a: number;
 }
 
-/*
-down X increases your aim by X units.
-up X decreases your aim by X units.
-forward X does two things:
-    It increases your horizontal position by X units.
-    It increases your depth by your aim multiplied by X.
-
-*/
-
 const performCommand = (comm: Command, { h, d, a }: Position) => {
     const [move, strStep] = comm.split(" ") as [Move, string];
     const step = parseInt(strStep);
