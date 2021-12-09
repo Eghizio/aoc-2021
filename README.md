@@ -12,3 +12,5 @@ Solving AoC with TypeScript, Python and Haskell.
 | 05  | Hydrothermal Venture                           | [Link](day-5) | [Link](http://adventofcode.com/2021/day/5)  |
 | 06  | Lanternfish                                    | [Link](day-6) | [Link](http://adventofcode.com/2021/day/6)  |
 | 07  | The Treachery of Whales                        | [Link](day-7) | [Link](http://adventofcode.com/2021/day/7)  |
+| 08  | Seven Segment Search                           | [Link](day-8) | [Link](http://adventofcode.com/2021/day/8)  |
+| 09  | Smoke Basin                                    | [Link](day-9) | [Link](http://adventofcode.com/2021/day/9)  |
