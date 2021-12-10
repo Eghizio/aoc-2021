@@ -14,3 +14,4 @@ Solving AoC with TypeScript, Python and Haskell.
 | 07  | The Treachery of Whales                        | [Link](day-7) | [Link](http://adventofcode.com/2021/day/7)  |
 | 08  | Seven Segment Search                           | [Link](day-8) | [Link](http://adventofcode.com/2021/day/8)  |
 | 09  | Smoke Basin                                    | [Link](day-9) | [Link](http://adventofcode.com/2021/day/9)  |
+| 10  | Syntax Scoring                                 | [Link](day-10)| [Link](http://adventofcode.com/2021/day/10) |
