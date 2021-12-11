@@ -15,3 +15,4 @@ Solving AoC with TypeScript, Python and Haskell.
 | 08  | Seven Segment Search                           | [Link](day-8) | [Link](http://adventofcode.com/2021/day/8)  |
 | 09  | Smoke Basin                                    | [Link](day-9) | [Link](http://adventofcode.com/2021/day/9)  |
 | 10  | Syntax Scoring                                 | [Link](day-10)| [Link](http://adventofcode.com/2021/day/10) |
+| 11  | Dumbo Octopus                                  | [Link](day-11)| [Link](http://adventofcode.com/2021/day/11) |
