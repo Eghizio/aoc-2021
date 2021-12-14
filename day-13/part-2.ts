@@ -3,6 +3,8 @@ import { loadInput } from "../utils/utils";
 type Point = [number, number];
 type Axis = "x" | "y";
 type Instruction = [Axis, number];
+type Mark = "." | "#";
+type Paper = Mark[][];
 
 const parsePoint = (line: string) => line.split(",").map(c => parseInt(c)) as Point;
 
@@ -17,6 +19,18 @@ const parsePointsAndInstructions = (data: string[]) => {
             ? { points, instructions: [...instructions, parseInstruction(line)] }
             : { instructions, points: [...points, parsePoint(line)] };
     }, { points: [] as Point[], instructions: [] as Instruction[] });
+};
+
+const constructPaper = (points: Point[]) => {
+    const [maxX, maxY] = points.reduce(([xs, ys], [x, y]) => [Math.max(xs, x), Math.max(ys, y)], [0, 0]);
+
+    const paper: Paper = Array.from({ length: maxY + 1 }, (_, y) => {
+        return Array.from({ length: maxX + 1 }, (_, x) => {
+            return !!points.find(([px, py]) => x === px && y === py) ? "#" : ".";
+        });
+    });
+
+    return paper;
 };
 
 const flipPoint = (point: Point, [axis, value]: Instruction): Point => {
@@ -37,12 +51,14 @@ const foldPaper = (points: Point[], instruction: Instruction) => {
     }, []);
 };
 
+const drawPaper = (points: Point[]) => console.log(constructPaper(points).map(line => line.join("")).join("\n"));
+
 (() => {
     const input = loadInput("input");
 
     const { points, instructions } = parsePointsAndInstructions(input);
 
-    const firstFold = foldPaper(points, instructions[0]).length;
+    const paper = instructions.reduce((paper, instruction) => foldPaper(paper, instruction), points);
 
-    console.log(firstFold);
+    drawPaper(paper);
 })();
